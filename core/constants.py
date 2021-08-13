@@ -1,0 +1,2 @@
+global DF
+DF = None
