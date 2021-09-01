@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import io
 
-from core.components.modify import modify
+from achoes.components.modify import modify
 
 
 def data_type():

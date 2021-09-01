@@ -1,12 +1,12 @@
 import streamlit as st
 
-from core.file_handling import csv
+from achoes.file_handling import csv
 
-from core.output_layer.sidebar import display_df
-from core.output_layer.sidebar import display_data_info
-from core.output_layer.sidebar import display_plot
-from core.output_layer.sidebar import display_modify
-from core.output_layer.sidebar import display_search
+from achoes.output_layer.sidebar import display_df
+from achoes.output_layer.sidebar import display_data_info
+from achoes.output_layer.sidebar import display_plot
+from achoes.output_layer.sidebar import display_modify
+from achoes.output_layer.sidebar import display_search
 
 if __name__ == "__main__":
 

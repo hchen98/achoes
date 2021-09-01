@@ -10,7 +10,7 @@ def plot_bar():
     x = st.sidebar.selectbox("X-axis", col_list)
     y = st.sidebar.selectbox("Y-axis", col_list)
     
-    with st.sidebar.beta_expander("See explanation"):
+    with st.expander("See explanation"):
         st.write("""
             The chart above shows some numbers I picked for you.
             I rolled actual dice for these, so they're *guaranteed* to
@@ -67,16 +67,22 @@ def plot_pie():
         st.plotly_chart(fig)
 
 
+def pair_plot():
+    fig = px.scatter_matrix(st.session_state.df)
+    st.plotly_chart(fig)
+
+
 def display_plot():
     selectbox4 = st.sidebar.selectbox(
         "What plot you want to see?",
-        ("Bar", "Scatter", "Pie")
+        ("Bar", "Scatter", "Pie", "Pair Plot")
         )
     
     OPTIONS = {
         "Bar": plot_bar,
         "Scatter": plot_scatter,
-        "Pie": plot_pie
+        "Pie": plot_pie,
+        "Pair Plot": pair_plot,
     }
 
     OPTIONS[selectbox4]()
